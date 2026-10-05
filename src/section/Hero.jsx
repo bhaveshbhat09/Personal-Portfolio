@@ -1,3 +1,7 @@
+import { Button } from "@/components/Button";
+import { ArrowRight, Download } from "lucide-react";
+import { AnimatedBorderButton } from "../components/AnimatedBorderButton";
+
 export const Hero = () => {
     return <section className="relative min-h-screen flex items-center overflow-hidden">
         {/* {BG} */}
@@ -32,8 +36,8 @@ export const Hero = () => {
                 </div>
 
                 {/* {HeadLine} */}
-                <div>
-                    <h1>
+                <div className="space-y-4">
+                    <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight animate-fade-in animation-delay-100">
                         Crafting <span className="text-primary glow-text">digital</span>
                         <br />
                         experiences with
@@ -42,10 +46,23 @@ export const Hero = () => {
                             precision.
                         </span>
                     </h1>
-                    
+                    <p className="text-lg text-muted-foreground max-w-lg animate-fade-in animation-delay-200">
+                        Hi, I'm Bhavesh Bhat - a software engineer specializing in Backend Systems.
+                        I Build scalable, performant web applications that users love.
+                    </p>
+                </div>
+                {/* CTAs */}
+                <div>
+                    <Button size="lg">
+                        Contact Me <ArrowRight className="w-5 h-5" />
+                    </Button>
+                     <AnimatedBorderButton>
+                        <Download className="w-5 h-5" />
+                        Download CV
+                    </AnimatedBorderButton>
                 </div>
             </div>
-            {/* {Right COlumn} */}
+            {/* {Right COlumn} - Profile Image*/}
         </div>
     </div>
     </section>;
